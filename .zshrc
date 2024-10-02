@@ -23,6 +23,10 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
 
+# add powerlevel10k prompt
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
+
 # add zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -60,7 +64,5 @@ zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
 # aliases
 alias ls="ls --color"
 
-# add starship prompt
-eval "$(starship init zsh)"
-export STARSHIP_CONFIG=~/.config/starship.toml
-
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
