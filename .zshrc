@@ -7,7 +7,11 @@ fi
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# export paths
+### export paths
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -60,6 +64,9 @@ setopt hist_ignore_dups
 # completion styling
 zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
 zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
+
+# globs work even when not matching anything
+unsetopt nomatch
 
 # aliases
 alias ls="ls --color"
