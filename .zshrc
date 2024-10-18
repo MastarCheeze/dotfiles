@@ -73,6 +73,7 @@ unsetopt nomatch
 
 # aliases
 alias ls="ls --color"
+alias tree="tree -C"
 alias gcc="/usr/local/bin/gcc-14"
 alias g++="/usr/local/bin/g++-14"
 
