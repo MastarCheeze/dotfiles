@@ -7,6 +7,8 @@ o.showmode = false
 o.cursorline = true
 o.cursorlineopt = "both"
 
+vim.opt.termguicolors = true
+
 -- Indenting
 o.expandtab = true
 o.shiftwidth = 2
