@@ -24,6 +24,7 @@ require("lazy").setup({
   install = {
     colorscheme = { "onedark" },
   },
+  change_detection = { enabled = false },
   ui = {
     border = "single",
     icons = {
