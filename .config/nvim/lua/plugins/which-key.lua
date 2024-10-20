@@ -5,7 +5,7 @@ return {
   lazy = false,
   opts = {
     preset = "modern",
-    delay = 1000,
+    delay = 300,
     triggers = {
       { "<auto>", mode = "nixsotc" },
       { "a", mode = { "n", "v" } },
