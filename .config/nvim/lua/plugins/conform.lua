@@ -9,7 +9,7 @@ return {
     },
     formatters = {
       stylua = {
-        prepend_args = { "--indent-type", "spaces", "--indent-width", "2" },
+        prepend_args = { "--indent-type", "spaces", "--indent-width", "2", "--quote-style", "ForceDouble" },
       },
     },
   },
