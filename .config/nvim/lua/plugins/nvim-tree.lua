@@ -17,9 +17,26 @@ return {
       preserve_window_proportions = true,
     },
     renderer = {
-      root_folder_label = false,
-      highlight_git = true,
+      root_folder_label = ":t:r",
       indent_markers = { enable = true },
+      highlight_git = "name",
+      icons = {
+        git_placement = "right_align",
+        glyphs = {
+          git = {
+            unstaged = "󱈸",
+            staged = "󱇬",
+            unmerged = "",
+            renamed = "➜",
+            untracked = "",
+            deleted = "󱘹",
+            ignored = "",
+          },
+        },
+      },
+    },
+    modified = {
+      enable = true,
     },
   },
 }
