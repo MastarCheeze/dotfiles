@@ -2,7 +2,7 @@ local map = vim.keymap.set
 local del = vim.keymap.del
 
 map("n", "<leader>w", "<cmd>w<cr>", { noremap = true, desc = "Write buffer" })
-map("n", "<leader>q", "<cmd>q<cr>", { noremap = true, desc = "Quit window" })
+map("n", "<leader>q", "<cmd>qa<cr>", { noremap = true, desc = "Quit all windows" })
 
 -- Vertical movement centering
 map("n", "<C-d>", "<C-d>zz", { noremap = true })
@@ -15,6 +15,7 @@ map("n", "<leader>p", "\"_dP", { noremap = true, desc = "Paste over & retain buf
 map("n", "<leader>y", "\"+y", { noremap = true, desc = "Yank to system clipboard" })
 
 -- File explorer
+<<<<<<< HEAD
 map({ "n", "i", "v" }, "<M-n>", "<cmd>NvimTreeToggle<cr>", { silent = true, desc = "NvimTree toggle window" })
 map({ "n", "i", "v" }, "<leader>e", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTree focus window" })
 
@@ -24,14 +25,23 @@ map({ "n", "i", "v" }, "<M-w>", "<cmd>tabc<cr>", { desc = "Tab close" })
 map({ "n", "i", "v" }, "<M-]>", "<cmd>tabn<cr>", { desc = "Tab next" })
 map({ "n", "i", "v" }, "<M-[>", "<cmd>tabp<cr>", { desc = "Tab prev" })
 
+-- Tabs
+map({ "n", "i", "v" }, "<M-n>", "<cmd>tabnew<cr>", { desc = "Tab new" })
+map({ "n", "i", "v" }, "<M-w>", "<cmd>tabc<cr>", { desc = "Tab close" })
+map({ "n", "i", "v" }, "<M-]>", "<cmd>tabn<cr>", { desc = "Tab next" })
+map({ "n", "i", "v" }, "<M-[>", "<cmd>tabp<cr>", { desc = "Tab prev" })
+
 -- Buffers
--- map({ "n", "i", "v" }, "<M-]>", "<cmd>bn<cr>", { desc = "Buffer next" })
--- map({ "n", "i", "v" }, "<M-[>", "<cmd>bp<cr>", { desc = "Buffer prev" })
--- map({ "n", "i", "v" }, "<M-w>", "<cmd>bd<cr>", { desc = "Buffer delete" })
 -- map({ "n", "i", "v" }, "<M-q>", function()
 --   vim.cmd(":BufOnly")
 --   require("lualine").refresh()
--- end, { desc = "Buffer close all others", silent = true })
+-- end, { desc = "Buffer close all others" })
+
+-- Window movement focus
+map("n", "<C-h>", "<C-w>h", { desc = "Switch window left" })
+map("n", "<C-l>", "<C-w>l", { desc = "Switch window right" })
+map("n", "<C-j>", "<C-w>j", { desc = "Switch window down" })
+map("n", "<C-k>", "<C-w>k", { desc = "Switch window up" })
 
 -- Telescope picker
 local builtin = require("telescope.builtin")
