@@ -35,11 +35,16 @@ return {
         },
       },
     },
+    modified = {
+      enable = true,
+      show_on_open_dirs = false,
+    },
     git = {
       show_on_open_dirs = false,
     },
-    modified = {
+    diagnostics = {
       enable = true,
+      show_on_open_dirs = false,
     },
   },
 }
