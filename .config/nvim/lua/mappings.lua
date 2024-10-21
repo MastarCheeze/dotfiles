@@ -11,7 +11,7 @@ map("n", "n", "nzzzv", { noremap = true })
 map("n", "N", "Nzzzv", { noremap = true })
 
 -- Copy and paste
-map("n", "<leader>p", "\"_dP", { noremap = true, desc = "Paste over w/o overwriting buffer" })
+map("n", "<leader>p", "\"_dP", { noremap = true, desc = "Paste over & retain buffer" })
 map("n", "<leader>y", "\"+y", { noremap = true, desc = "Yank to system clipboard" })
 
 -- File explorer
@@ -19,30 +19,29 @@ map({ "n", "i", "v" }, "<M-n>", "<cmd>NvimTreeToggle<cr>", { silent = true, desc
 map({ "n", "i", "v" }, "<M-e>", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTree focus window" })
 
 -- Buffers
-map({ "n", "i", "v" }, "<M-]>", "<cmd>bn<cr>", { desc = "Buffer next" })
-map({ "n", "i", "v" }, "<M-[>", "<cmd>bp<cr>", { desc = "Buffer prev" })
-map({ "n", "i", "v" }, "<M-w>", "<cmd>bd<cr>", { desc = "Buffer delete" })
-map({ "n", "i", "v" }, "<M-q>", function()
-  vim.cmd(":BufOnly")
-  require("lualine").refresh()
-end, { desc = "Buffer close all others", silent = true })
+-- map({ "n", "i", "v" }, "<M-]>", "<cmd>bn<cr>", { desc = "Buffer next" })
+-- map({ "n", "i", "v" }, "<M-[>", "<cmd>bp<cr>", { desc = "Buffer prev" })
+-- map({ "n", "i", "v" }, "<M-w>", "<cmd>bd<cr>", { desc = "Buffer delete" })
+-- map({ "n", "i", "v" }, "<M-q>", function()
+--   vim.cmd(":BufOnly")
+--   require("lualine").refresh()
+-- end, { desc = "Buffer close all others", silent = true })
 
 -- Telescope picker
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ft", builtin.builtin, { desc = "Telescope" })
-vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "Telescope find oldfiles" })
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
-vim.keymap.set("n", "<leader>fr", builtin.registers, { desc = "Telescope registers" })
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
-vim.keymap.set("n", "<leader>gc", builtin.git_commits, { desc = "Telescope Git commits" })
-vim.keymap.set("n", "<leader>gv", builtin.git_bcommits, { desc = "Telescope Git buffer commits" })
-vim.keymap.set("n", "<leader>gb", builtin.git_branches, { desc = "Telescope Git branches" })
-vim.keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Telescope Git status" })
+vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>o", builtin.oldfiles, { desc = "Telescope find oldfiles" })
+vim.keymap.set("n", "<leader>g", builtin.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<leader>r", builtin.registers, { desc = "Telescope registers" })
+vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "Telescope help tags" })
+vim.keymap.set("n", "<leader>c", builtin.git_commits, { desc = "Telescope Git commits" })
+vim.keymap.set("n", "<leader>x", builtin.git_bcommits, { desc = "Telescope Git buffer commits" })
+vim.keymap.set("n", "<leader>z", builtin.git_branches, { desc = "Telescope Git branches" })
+vim.keymap.set("n", "<leader>s", builtin.git_status, { desc = "Telescope Git status" })
 
 -- Format
-map({ "n", "v" }, "<leader>.", function()
+map({ "n", "v" }, "<leader>m", function()
   require("conform").format({ lsp_format = true })
 end, { desc = "Format file" })
 
