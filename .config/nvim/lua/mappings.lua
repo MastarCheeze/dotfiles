@@ -11,7 +11,7 @@ map("n", "n", "nzzzv", { noremap = true })
 map("n", "N", "Nzzzv", { noremap = true })
 
 -- Copy and paste
-map("n", "<leader>p", "\"_dP", { noremap = true, desc = "Paste over & retain buffer" })
+map({ "n", "v" }, "<leader>p", "\"_dP", { noremap = true, desc = "Paste over & retain buffer" })
 map("n", "<leader>y", "\"+y", { noremap = true, desc = "Yank to system clipboard" })
 
 -- File explorer
@@ -37,17 +37,16 @@ map("n", "<C-j>", "<C-w>j", { desc = "Switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "Switch window up" })
 
 -- Telescope picker
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>o", builtin.oldfiles, { desc = "Telescope find oldfiles" })
-vim.keymap.set("n", "<leader>g", builtin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Telescope buffers" })
-vim.keymap.set("n", "<leader>r", builtin.registers, { desc = "Telescope registers" })
-vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "Telescope help tags" })
-vim.keymap.set("n", "<leader>c", builtin.git_commits, { desc = "Telescope Git commits" })
-vim.keymap.set("n", "<leader>x", builtin.git_bcommits, { desc = "Telescope Git buffer commits" })
-vim.keymap.set("n", "<leader>z", builtin.git_branches, { desc = "Telescope Git branches" })
-vim.keymap.set("n", "<leader>s", builtin.git_status, { desc = "Telescope Git status" })
+vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>", { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>o", "<cmd>Telescope oldfiles<cr>", { desc = "Telescope find oldfiles" })
+vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Telescope buffers" })
+vim.keymap.set({ "n", "v" }, "<leader>r", "<cmd>Telescope registers<cr>", { desc = "Telescope registers" })
+vim.keymap.set("n", "<leader>h", "<cmd>Telescope help_tags<cr>", { desc = "Telescope help tags" })
+vim.keymap.set("n", "<leader>c", "<cmd>Telescope git_commits<cr>", { desc = "Telescope Git commits" })
+vim.keymap.set("n", "<leader>x", "<cmd>Telescope git_bcommits<cr>", { desc = "Telescope Git buffer commits" })
+vim.keymap.set("n", "<leader>z", "<cmd>Telescope git_branches<cr>", { desc = "Telescope Git branches" })
+vim.keymap.set("n", "<leader>s", "<cmd>Telescope git_status<cr>", { desc = "Telescope Git status" })
 
 -- Format
 map({ "n", "v" }, "<leader>m", function()
@@ -60,4 +59,3 @@ map("v", "<leader>/", "gc", { remap = true, desc = "Comment toggle" })
 
 -- WhichKey guide
 map("n", "<leader>?", "<cmd>WhichKey<cr>", { desc = "WhichKey all keymaps" })
-

@@ -2,6 +2,7 @@ return {
   "nvim-telescope/telescope.nvim",
   branch = "0.1.x",
   dependencies = { "nvim-lua/plenary.nvim" },
+  cmd = "Telescope",
   config = function()
     local defaults = require("telescope.themes").get_dropdown({})
     local actions = require("telescope.actions")
@@ -28,6 +29,11 @@ return {
             i = {
               ["<M-w>"] = actions.delete_buffer,
             },
+          },
+        },
+        registers = {
+          layout_config = {
+            anchor = "N",
           },
         },
         git_status = {
