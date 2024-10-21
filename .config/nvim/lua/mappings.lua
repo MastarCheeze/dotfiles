@@ -24,12 +24,6 @@ map({ "n", "i", "v" }, "<M-w>", "<cmd>tabc<cr>", { desc = "Tab close" })
 map({ "n", "i", "v" }, "<M-]>", "<cmd>tabn<cr>", { desc = "Tab next" })
 map({ "n", "i", "v" }, "<M-[>", "<cmd>tabp<cr>", { desc = "Tab prev" })
 
--- Tabs
-map({ "n", "i", "v" }, "<M-n>", "<cmd>tabnew<cr>", { desc = "Tab new" })
-map({ "n", "i", "v" }, "<M-w>", "<cmd>tabc<cr>", { desc = "Tab close" })
-map({ "n", "i", "v" }, "<M-]>", "<cmd>tabn<cr>", { desc = "Tab next" })
-map({ "n", "i", "v" }, "<M-[>", "<cmd>tabp<cr>", { desc = "Tab prev" })
-
 -- Buffers
 -- map({ "n", "i", "v" }, "<M-q>", function()
 --   vim.cmd(":BufOnly")
@@ -66,3 +60,4 @@ map("v", "<leader>/", "gc", { remap = true, desc = "Comment toggle" })
 
 -- WhichKey guide
 map("n", "<leader>?", "<cmd>WhichKey<cr>", { desc = "WhichKey all keymaps" })
+
