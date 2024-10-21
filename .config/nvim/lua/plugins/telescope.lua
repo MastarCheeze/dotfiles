@@ -14,6 +14,11 @@ return {
         anchor = "S",
       },
     }
+    defaults.mappings = {
+      i = {
+        ["<M-a>"] = actions.toggle_all,
+      },
+    }
 
     require("telescope").setup({
       defaults = defaults,
@@ -22,7 +27,6 @@ return {
           mappings = {
             i = {
               ["<M-w>"] = actions.delete_buffer,
-              ["<M-a>"] = actions.toggle_all,
             },
           },
         },

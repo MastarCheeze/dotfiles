@@ -16,7 +16,7 @@ map("n", "<leader>y", "\"+y", { noremap = true, desc = "Yank to system clipboard
 
 -- File explorer
 map({ "n", "i", "v" }, "<M-n>", "<cmd>NvimTreeToggle<cr>", { silent = true, desc = "NvimTree toggle window" })
-map({ "n", "i", "v" }, "<leader>e", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTree focus window" })
+map("n", "<S-e>", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTree focus window" })
 
 -- Tabs
 map({ "n", "i", "v" }, "<M-t>", "<cmd>tabnew<cr>", { desc = "Tab new" })
