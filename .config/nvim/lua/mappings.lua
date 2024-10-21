@@ -16,7 +16,13 @@ map("n", "<leader>y", "\"+y", { noremap = true, desc = "Yank to system clipboard
 
 -- File explorer
 map({ "n", "i", "v" }, "<M-n>", "<cmd>NvimTreeToggle<cr>", { silent = true, desc = "NvimTree toggle window" })
-map({ "n", "i", "v" }, "<M-e>", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTree focus window" })
+map({ "n", "i", "v" }, "<leader>e", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTree focus window" })
+
+-- Tabs
+map({ "n", "i", "v" }, "<M-t>", "<cmd>tabnew<cr>", { desc = "Tab new" })
+map({ "n", "i", "v" }, "<M-w>", "<cmd>tabc<cr>", { desc = "Tab close" })
+map({ "n", "i", "v" }, "<M-]>", "<cmd>tabn<cr>", { desc = "Tab next" })
+map({ "n", "i", "v" }, "<M-[>", "<cmd>tabp<cr>", { desc = "Tab prev" })
 
 -- Buffers
 -- map({ "n", "i", "v" }, "<M-]>", "<cmd>bn<cr>", { desc = "Buffer next" })
