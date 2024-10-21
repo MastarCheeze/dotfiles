@@ -3,6 +3,8 @@ local del = vim.keymap.del
 
 map("n", "<leader>w", "<cmd>w<cr>", { noremap = true, desc = "Write buffer" })
 map("n", "<leader>q", "<cmd>qa<cr>", { noremap = true, desc = "Quit all windows" })
+map({ "n", "v" }, ";", ":") -- make life easier
+map({ "n", "v" }, "<esc>", "<cmd>noh<cr>") -- remove highlights with esc
 
 -- Vertical movement centering
 map("n", "<C-d>", "<C-d>zz", { noremap = true })
@@ -19,12 +21,13 @@ map({ "n", "i", "v" }, "<M-n>", "<cmd>NvimTreeToggle<cr>", { silent = true, desc
 map("n", "<S-e>", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTree focus window" })
 
 -- Tabs
-map({ "n", "i", "v" }, "<M-t>", "<cmd>tabnew<cr>", { desc = "Tab new" })
-map({ "n", "i", "v" }, "<M-w>", "<cmd>tabc<cr>", { desc = "Tab close" })
-map({ "n", "i", "v" }, "<M-]>", "<cmd>tabn<cr>", { desc = "Tab next" })
-map({ "n", "i", "v" }, "<M-[>", "<cmd>tabp<cr>", { desc = "Tab prev" })
+-- map({ "n", "i", "v" }, "<M-t>", "<cmd>tabnew<cr>", { desc = "Tab new" })
+-- map({ "n", "i", "v" }, "<M-w>", "<cmd>tabc<cr>", { desc = "Tab close" })
+-- map({ "n", "i", "v" }, "<M-]>", "<cmd>tabn<cr>", { desc = "Tab next" })
+-- map({ "n", "i", "v" }, "<M-[>", "<cmd>tabp<cr>", { desc = "Tab prev" })
 
 -- Buffers
+map({ "n", "i", "v" }, "<M-q>", "<cmd>%bd<cr>")
 -- map({ "n", "i", "v" }, "<M-q>", function()
 --   vim.cmd(":BufOnly")
 --   require("lualine").refresh()
