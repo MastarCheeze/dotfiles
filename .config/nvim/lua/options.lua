@@ -3,6 +3,7 @@ local opt = vim.opt
 
 o.laststatus = 3
 o.showmode = false
+o.showtabline = 0
 
 o.cursorline = true
 o.cursorlineopt = "both"
