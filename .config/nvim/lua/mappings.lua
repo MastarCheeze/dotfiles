@@ -15,7 +15,6 @@ map("n", "<leader>p", "\"_dP", { noremap = true, desc = "Paste over & retain buf
 map("n", "<leader>y", "\"+y", { noremap = true, desc = "Yank to system clipboard" })
 
 -- File explorer
-<<<<<<< HEAD
 map({ "n", "i", "v" }, "<M-n>", "<cmd>NvimTreeToggle<cr>", { silent = true, desc = "NvimTree toggle window" })
 map({ "n", "i", "v" }, "<leader>e", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTree focus window" })
 
