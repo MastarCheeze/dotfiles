@@ -7,8 +7,14 @@ o.showtabline = 0
 
 o.cursorline = true
 o.cursorlineopt = "both"
+o.colorcolumn = "120"
+o.scrolloff = 8
 
-vim.opt.termguicolors = true
+o.splitbelow = true
+o.splitright = true
+o.timeoutlen = 400
+
+o.termguicolors = true
 
 -- Indenting
 o.expandtab = true
@@ -29,10 +35,6 @@ o.numberwidth = 2
 o.signcolumn = "yes"
 opt.fillchars = { eob = " " }
 
-o.splitbelow = true
-o.splitright = true
-o.timeoutlen = 400
+-- Backup mechanisms
 o.undofile = true
-
--- interval for writing swap file to disk, also used by gitsigns
-o.updatetime = 250
+o.updatetime = 250 -- interval for writing swap file to disk, also used by gitsigns
