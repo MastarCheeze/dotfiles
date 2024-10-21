@@ -21,8 +21,8 @@ return {
         buffers = {
           mappings = {
             i = {
-              ["<C-w>"] = actions.delete_buffer,
-              ["<C-a>"] = actions.toggle_all,
+              ["<M-w>"] = actions.delete_buffer,
+              ["<M-a>"] = actions.toggle_all,
             },
           },
         },
