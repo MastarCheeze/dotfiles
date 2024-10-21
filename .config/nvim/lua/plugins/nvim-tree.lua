@@ -35,6 +35,9 @@ return {
         },
       },
     },
+    git = {
+      show_on_open_dirs = false,
+    },
     modified = {
       enable = true,
     },
