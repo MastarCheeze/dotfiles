@@ -13,8 +13,13 @@ map("n", "n", "nzzzv", { noremap = true })
 map("n", "N", "Nzzzv", { noremap = true })
 
 -- Copy and paste
-map({ "n", "v" }, "<leader>p", "\"_dP", { noremap = true, desc = "Paste over & retain buffer" })
-map("n", "<leader>y", "\"+y", { noremap = true, desc = "Yank to system clipboard" })
+map("x", "<leader>p", "\"_dP", { noremap = true, desc = "Paste over & retain buffer" })
+map({ "n", "v" }, "<leader>y", "\"+y", { noremap = true, desc = "Yank to system clipboard" })
+map({ "n", "v" }, "<leader>d", "\"_d", { noremap = true, desc = "Delete to void register" })
+
+-- Shift lines
+map("v", "J", ":m '>+1<cr>gv=gv", { silent = true, desc = "Shift lines up" })
+map("v", "K", ":m '<-2<cr>gv=gv", { silent = true, desc = "Shift lines down" })
 
 -- File explorer
 map({ "n", "i", "v" }, "<M-n>", "<cmd>NvimTreeToggle<cr>", { silent = true, desc = "NvimTree toggle window" })
@@ -27,7 +32,7 @@ map("n", "<S-e>", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTree fo
 -- map({ "n", "i", "v" }, "<M-[>", "<cmd>tabp<cr>", { desc = "Tab prev" })
 
 -- Buffers
-map({ "n", "i", "v" }, "<M-q>", "<cmd>%bd<cr>")
+map({ "n", "i", "v" }, "<M-q>", "<cmd>%bd<cr>", { desc = "Close all buffers" })
 -- map({ "n", "i", "v" }, "<M-q>", function()
 --   vim.cmd(":BufOnly")
 --   require("lualine").refresh()
