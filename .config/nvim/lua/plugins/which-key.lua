@@ -2,7 +2,7 @@
 return {
   "folke/which-key.nvim",
   cmd = "WhichKey",
-  lazy = false,
+  event = "VeryLazy",
   opts = {
     preset = "modern",
     delay = 300,
