@@ -22,19 +22,9 @@ require("lazy").setup({
   { import = "plugins" },
   { import = "plugins.lsp" },
 }, {
-  install = {
-    colorscheme = { "onedark" },
-  },
+  install = { colorscheme = { "onedark" } },
   change_detection = { enabled = false },
-  ui = {
-    border = "single",
-    icons = {
-      ft = "",
-      lazy = "󰂠 ",
-      loaded = "",
-      not_loaded = "",
-    },
-  },
+  ui = { border = "single" },
   performance = {
     rtp = {
       disabled_plugins = {

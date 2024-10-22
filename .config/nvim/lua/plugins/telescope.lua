@@ -25,15 +25,12 @@ return {
       defaults = defaults,
       pickers = {
         buffers = {
-          mappings = {
-            i = {
-              ["<M-w>"] = actions.delete_buffer,
-            },
-          },
+          ignore_current_buffer = true,
+          sort_lastused = true,
         },
         registers = {
           layout_config = {
-            anchor = "N",
+            anchor = "n",
           },
         },
         git_status = {

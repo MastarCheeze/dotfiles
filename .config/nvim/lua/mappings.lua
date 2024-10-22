@@ -23,7 +23,7 @@ map("v", "K", ":m '<-2<cr>gv=gv", { silent = true, desc = "Shift lines down" })
 
 -- File explorer
 map({ "n", "i", "v" }, "<M-n>", "<cmd>NvimTreeToggle<cr>", { silent = true, desc = "NvimTree toggle window" })
-map("n", "<S-e>", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTree focus window" })
+map("n", "<leader>e", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTree focus window" })
 
 -- Tabs
 -- map({ "n", "i", "v" }, "<M-t>", "<cmd>tabnew<cr>", { desc = "Tab new" })
@@ -47,14 +47,14 @@ map("n", "<C-k>", "<C-w>k", { desc = "Switch window up" })
 -- Telescope picker
 vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>", { desc = "Telescope find files" })
 vim.keymap.set("n", "<leader>o", "<cmd>Telescope oldfiles<cr>", { desc = "Telescope find oldfiles" })
-vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>p", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live grep" })
 vim.keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Telescope buffers" })
 vim.keymap.set({ "n", "v" }, "<leader>r", "<cmd>Telescope registers<cr>", { desc = "Telescope registers" })
 vim.keymap.set("n", "<leader>h", "<cmd>Telescope help_tags<cr>", { desc = "Telescope help tags" })
-vim.keymap.set("n", "<leader>c", "<cmd>Telescope git_commits<cr>", { desc = "Telescope Git commits" })
-vim.keymap.set("n", "<leader>x", "<cmd>Telescope git_bcommits<cr>", { desc = "Telescope Git buffer commits" })
-vim.keymap.set("n", "<leader>z", "<cmd>Telescope git_branches<cr>", { desc = "Telescope Git branches" })
-vim.keymap.set("n", "<leader>s", "<cmd>Telescope git_status<cr>", { desc = "Telescope Git status" })
+vim.keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", { desc = "Telescope Git commits" })
+vim.keymap.set("n", "<leader>gv", "<cmd>Telescope git_bcommits<cr>", { desc = "Telescope Git buffer commits" })
+vim.keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "Telescope Git branches" })
+vim.keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>", { desc = "Telescope Git status" })
 
 -- Format
 map({ "n", "v" }, "<leader>m", function()
