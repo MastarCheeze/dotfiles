@@ -20,6 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 -- load plugins with lazy
 require("lazy").setup({
   { import = "plugins" },
+  { import = "plugins.lsp" },
 }, {
   install = {
     colorscheme = { "onedark" },
