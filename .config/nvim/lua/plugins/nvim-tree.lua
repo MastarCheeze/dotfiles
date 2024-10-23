@@ -22,6 +22,7 @@ return {
       highlight_git = "name",
       icons = {
         git_placement = "right_align",
+        diagnostics_placement = "after",
         glyphs = {
           git = {
             unstaged = "󱈸",
@@ -45,6 +46,12 @@ return {
     diagnostics = {
       enable = true,
       show_on_open_dirs = false,
+      icons = {
+        hint = "󰌶",
+        info = "󰋽",
+        warning = "󰀪",
+        error = "󰅚",
+      },
     },
   },
 }

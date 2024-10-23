@@ -4,6 +4,7 @@ local opt = vim.opt
 o.laststatus = 3
 o.showmode = false
 o.showtabline = 0
+o.wrap = false
 
 o.cursorline = true
 o.cursorlineopt = "both"
@@ -19,9 +20,11 @@ o.termguicolors = true
 -- Indenting
 o.expandtab = true
 o.shiftwidth = 2
-o.smartindent = true
 o.tabstop = 2
 o.softtabstop = 2
+o.smartindent = true
+o.autoindent = true
+o.cindent = true
 
 o.ignorecase = true
 o.smartcase = true
