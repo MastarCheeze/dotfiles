@@ -5,5 +5,8 @@ return {
   event = { "BufNew" },
   opts = {
     scope = { show_start = false, show_end = false },
+    exclude = {
+      filetypes = { "dashboard" },
+    },
   },
 }
