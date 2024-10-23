@@ -45,16 +45,16 @@ map("n", "<C-j>", "<C-w>j", { desc = "Switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "Switch window up" })
 
 -- Telescope picker
-vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>", { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>o", "<cmd>Telescope oldfiles<cr>", { desc = "Telescope find oldfiles" })
-vim.keymap.set("n", "<leader>p", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Telescope buffers" })
-vim.keymap.set({ "n", "v" }, "<leader>r", "<cmd>Telescope registers<cr>", { desc = "Telescope registers" })
-vim.keymap.set("n", "<leader>h", "<cmd>Telescope help_tags<cr>", { desc = "Telescope help tags" })
-vim.keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", { desc = "Telescope Git commits" })
-vim.keymap.set("n", "<leader>gv", "<cmd>Telescope git_bcommits<cr>", { desc = "Telescope Git buffer commits" })
-vim.keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "Telescope Git branches" })
-vim.keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>", { desc = "Telescope Git status" })
+map("n", "<leader>f", "<cmd>Telescope find_files<cr>", { desc = "Telescope find files" })
+map("n", "<leader>o", "<cmd>Telescope oldfiles<cr>", { desc = "Telescope find oldfiles" })
+map("n", "<leader>y", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live grep" })
+map("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Telescope buffers" })
+map({ "n", "v" }, "<leader>r", "<cmd>Telescope registers<cr>", { desc = "Telescope registers" })
+map("n", "<leader>h", "<cmd>Telescope help_tags<cr>", { desc = "Telescope help tags" })
+map("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", { desc = "Telescope Git commits" })
+map("n", "<leader>gC", "<cmd>Telescope git_bcommits<cr>", { desc = "Telescope Git buffer commits" })
+map("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "Telescope Git branches" })
+map("n", "<leader>gs", "<cmd>Telescope git_status<cr>", { desc = "Telescope Git status" })
 
 -- Format
 map({ "n", "v" }, "<leader>m", function()
@@ -67,3 +67,4 @@ map("v", "<leader>/", "gc", { remap = true, desc = "Comment toggle" })
 
 -- WhichKey guide
 map("n", "<leader>?", "<cmd>WhichKey<cr>", { desc = "WhichKey all keymaps" })
+
