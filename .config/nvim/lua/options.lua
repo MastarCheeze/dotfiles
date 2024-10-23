@@ -7,7 +7,7 @@ o.showtabline = 0
 o.wrap = false
 
 o.cursorline = true
-o.cursorlineopt = "both"
+o.cursorlineopt = "number"
 o.colorcolumn = "120"
 o.scrolloff = 8
 

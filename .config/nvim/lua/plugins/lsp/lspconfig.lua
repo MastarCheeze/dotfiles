@@ -6,6 +6,16 @@ return {
     local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
+    vim.diagnostic.config({
+      float = {
+        header = "",
+        format = function(diagnostic)
+          return diagnostic.message .. " " .. diagnostic.source
+        end,
+        border = "solid",
+      },
+    })
+
     -- set keybinds
     local map = vim.keymap.set
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -22,7 +32,9 @@ return {
         map("n", "<leader>lD", vim.lsp.buf.declaration, opts("go to declaration"))
         map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts("see all code actions"))
         map("n", "<leader>cr", vim.lsp.buf.rename, opts("smart rename"))
-        map("n", "<leader>d", vim.diagnostic.open_float, opts("show line diagnostics"))
+        map("n", "<leader>d", function()
+          vim.diagnostic.open_float()
+        end, opts("show line diagnostics"))
         map("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<cr>", opts("show buffer diagnostics"))
         map("n", "]d", function()
           local jump = vim.diagnostic.get_next()

@@ -11,7 +11,7 @@ return {
       style = "darker",
       colors = {
         bg0 = "#14161A",
-        bg1 = "#1D2025",
+        bg1 = "#282D33",
         bg2 = "#252A31",
         bg3 = "#282B34",
         bg_d = "#16191D",

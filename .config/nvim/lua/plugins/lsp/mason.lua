@@ -13,7 +13,6 @@ return {
       ensure_installed = {
         "lua_ls",
         "clangd",
-        "pylsp",
         "ts_ls",
         "html",
       },

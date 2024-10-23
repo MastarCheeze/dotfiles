@@ -25,7 +25,7 @@ return {
       dashboard.button("n", "  Toggle File Explorer", "<cmd>NvimTreeToggle<cr>"),
       dashboard.button("f", "󰱼  Open Files", "<cmd>Telescope find_files<cr>"),
       dashboard.button("o", "󱋡  Open Recent Files", "<cmd>Telescope oldfiles<cr>"),
-      dashboard.button("y", "  Grep for Text in Files", "<cmd>Telescope live_grep<cr>"),
+      dashboard.button("u", "  Grep for Text in Files", "<cmd>Telescope live_grep<cr>"),
       dashboard.button("r", "󰁯  Restore Previous Session", "<cmd>SessionRestore<cr>"),
       dashboard.button("q", "󰅚  Quit NeoVim", "<cmd>qa<cr>"),
     }

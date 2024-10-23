@@ -32,7 +32,7 @@ map("n", "<leader>e", "<cmd>NvimTreeFocus<cr>", { silent = true, desc = "NvimTre
 -- map({ "n", "i", "v" }, "<M-[>", "<cmd>tabp<cr>", { desc = "Tab prev" })
 
 -- Buffers
-map({ "n", "i", "v" }, "<M-q>", "<cmd>%bd<cr>", { desc = "Close all buffers" })
+map({ "n", "i", "v" }, "<M-q>", "<cmd>%bd<cr><cmd>Alpha<cr>", { desc = "Close all buffers" })
 -- map({ "n", "i", "v" }, "<M-q>", function()
 --   vim.cmd(":BufOnly")
 --   require("lualine").refresh()
@@ -47,7 +47,7 @@ map("n", "<C-k>", "<C-w>k", { desc = "Switch window up" })
 -- Telescope picker
 map("n", "<leader>f", "<cmd>Telescope find_files<cr>", { desc = "Telescope find files" })
 map("n", "<leader>o", "<cmd>Telescope oldfiles<cr>", { desc = "Telescope find oldfiles" })
-map("n", "<leader>y", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live grep" })
+map("n", "<leader>u", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live grep" })
 map("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Telescope buffers" })
 map({ "n", "v" }, "<leader>r", "<cmd>Telescope registers<cr>", { desc = "Telescope registers" })
 map("n", "<leader>h", "<cmd>Telescope help_tags<cr>", { desc = "Telescope help tags" })
@@ -66,5 +66,4 @@ map("n", "<leader>/", "gcc", { remap = true, desc = "Comment toggle" })
 map("v", "<leader>/", "gc", { remap = true, desc = "Comment toggle" })
 
 -- WhichKey guide
-map("n", "<leader>?", "<cmd>WhichKey<cr>", { desc = "WhichKey all keymaps" })
-
+map({ "n", "v" }, "<leader>?", "<cmd>WhichKey<cr>", { desc = "WhichKey all keymaps" })
