@@ -1,16 +1,17 @@
 -- formatter
 return {
   "stevearc/conform.nvim",
-  event = { "BufWritePre" },
+  event = { "BufWritePre", "BufNewFile" },
   cmd = { "ConformInfo" },
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
-    },
-    formatters = {
-      stylua = {
-        prepend_args = { "--indent-type", "spaces", "--indent-width", "2", "--quote-style", "ForceDouble" },
-      },
+      c = { "clang-format" },
+      cpp = { "clang-format" },
+      javascript = { "prettier" },
+      typescript = { "prettier" },
+      html = { "prettier" },
+      markdown = { "prettier" },
     },
   },
 }
