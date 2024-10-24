@@ -1,2 +1,2 @@
 require("zhchay.core")
--- require("zhchay.plugins")
+require("zhchay.lazy")
