@@ -18,7 +18,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Start lazy
-require("lazy").setup({ { import = "zhchay.plugins" } }, {
+require("lazy").setup({ { import = "zhchay.plugins" }, { import = "zhchay.plugins.lsp" } }, {
   install = { colorscheme = { "onedark" } },
   change_detection = { enabled = false },
   -- disable unneccesary plugins

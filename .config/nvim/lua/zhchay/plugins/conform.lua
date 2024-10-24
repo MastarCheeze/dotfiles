@@ -2,6 +2,7 @@ return {
   "stevearc/conform.nvim",
   event = { "BufWritePre", "BufNewFile" },
   cmd = { "ConformInfo" },
+  dependencies = { { "zapling/mason-conform.nvim", opts = {} } },
 
   opts = {
     formatters_by_ft = {
